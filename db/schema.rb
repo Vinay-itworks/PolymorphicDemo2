@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_06_114438) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_06_115551) do
   create_table "apps", force: :cascade do |t|
     t.string "name"
     t.string "category"
@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_06_114438) do
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.decimal "score"
+    t.float "score"
     t.string "rateable_type", null: false
     t.integer "rateable_id", null: false
     t.datetime "created_at", null: false
